@@ -1,0 +1,34 @@
+{
+  "name": "devjs",
+  "version": "1.0.0",
+  "description": "Light weight Observable based, lit-html framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "rimraf dist/* && tsc",
+    "serve": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Devcon4/devjs.git"
+  },
+  "author": "Devyn Cyphers (Devcon4)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Devcon4/devjs/issues"
+  },
+  "homepage": "https://github.com/Devcon4/devjs#readme",
+  "devDependencies": {
+    "@types/uuid": "^3.4.3",
+    "awesome-typescript-loader": "^3.3.0",
+    "core-js": "^2.5.1",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "html-webpack-plugin": "^2.30.1",
+    "lit-html": "^0.7.1",
+    "rxjs": "^5.5.2",
+    "typescript": "^2.6.1",
+    "uuid": "^3.1.0",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4"
+  }
+}
