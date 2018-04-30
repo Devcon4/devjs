@@ -41,7 +41,7 @@ export abstract class Component {
     public render(isRoot = false) {
         RenderQueue.queue.push((() => {
             let r = this.build();
-            render(r, !!this.parent ? document.getElementById(this.parent.guid) : document.body);
+            render(r, document.getElementById(this.guid) || document.body);
         }).bind(this));
 
         if (isRoot && !ComponentTools.IsFirstRender) {
@@ -80,9 +80,10 @@ export abstract class Component {
     }
 }
 
-// export function html(strings: TemplateStringsArray, ...values: any[]): TemplateResult {
-//     return litHtml(strings, values);
-// }
+export function devHtml(strings: TemplateStringsArray, ...values: any[]): TemplateResult {
+    console.log(arguments)
+    return litHtml({} as TemplateStringsArray, values);
+}
 
 export function model(target: any, key: string) {
     var _val;
